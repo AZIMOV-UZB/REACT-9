@@ -1,5 +1,4 @@
 import React from "react";
-import tog from "../../assets/tog.jpg";
 import { NavLink, Outlet } from "react-router-dom";
 const Admin = () => {
   return (

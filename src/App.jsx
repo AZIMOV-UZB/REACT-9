@@ -1,8 +1,4 @@
-import { useState } from "react";
 import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
-import Kategorey from "./components/kategorey/Kategorey";
-import Json from "./components/json/Json";
 import Footer from "./components/footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";

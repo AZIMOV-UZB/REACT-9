@@ -1,10 +1,10 @@
 import React from "react";
-import NotFound from "../not-found/NotFound";
+import Uslogi from "../../components/uslogi/Uslogi";
 
 const Uslovenne = () => {
   return (
-    <div>
-      <NotFound />
+    <div className="container">
+      <Uslogi/>
     </div>
   );
 };
