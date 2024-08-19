@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {memo} from 'react'
 import rasm from "../../assets/image 34.png";
 import foto from "../../assets/foto.svg";
 import imag from "../../assets/foto-2.svg";
@@ -60,4 +60,4 @@ const Uslogi = () => {
   )
 }
 
-export default Uslogi
+export default memo(Uslogi)
