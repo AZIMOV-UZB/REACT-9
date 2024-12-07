@@ -1,5 +1,7 @@
 import React , {memo} from 'react'
 import "./footer.css"
+import logo  from '../../asset/LOGO.jpg';
+
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
     const footer = ["Все права защищены © 2015 интернет-магазин AIKEA.BY Беларусь.", "УНП 191828159 ИП Парейко В.С., регистрационный номер в торговом реестре 158299", "Политика конфиденциальности"]
@@ -9,8 +11,11 @@ const Footer = () => {
     return (
         <div className='bg-gray-100 pt-16 pb-10'>
         <div className='container px-4'>
-        <p className="text-3xl font-bold	 "> clickhose<hr className="hrr w-54" /></p>
-        <div className="flex flex-col md:flex-row gap-12 footer">
+        <img
+              className="w-[150px] h-[80px] object-contain "
+              src={logo}
+              alt="FOTO"
+            />        <div className="flex flex-col md:flex-row gap-12 footer">
                 <ul className="footer__collection w-full md:w-1/4 leading-normal flex flex-col gap-3 text3">
                     <p className='text-xl font-semibold'>Информация</p>
                     {

@@ -1,0 +1,9 @@
+@media (max-width:650px) {
+    .Afto{
+         }
+        .cardfoto{
+            width: 100%;
+        
+            transform: rotate(10rem);
+
+        }}

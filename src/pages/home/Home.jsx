@@ -1,13 +1,11 @@
 import React from "react";
-import Hero from "../../components/hero/Hero";
-import Kategorey from "../../components/kategorey/Kategorey";
-import Json from "../../components/json/Json";
+import Hero  from "../../components/hero/Hero.jsx"
+import Afto from "../../components/afto/Afto.jsx";
 const Home = () => {
   return (
     <div>
-      <Hero />
-      <Kategorey />
-      <Json />
+  <Hero/>
+  <Afto/>
     </div>
   );
 };

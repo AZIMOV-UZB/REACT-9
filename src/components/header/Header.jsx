@@ -1,62 +1,47 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo,useState } from "react";
 import "./header.css";
 import { RiMenu2Fill } from "react-icons/ri";
-import axios from "axios";
 import { Link, NavLink } from "react-router-dom";
+import logo  from '../../asset/LOGO.jpg';
 
-const API_URL = "https://dummyjson.com";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchRes, setSearchRes] = useState(null);
-  const [search, setSearch] = useState("");
-  const [searchFocus, setSearchFocus] = useState(false);
+  const [searchRes] = useState(null);
+  const [searchFocus] = useState(false);
 
-  useEffect(() => {
-    search.trim().length >= 3
-      ? axios
-          .get(`${API_URL}/products/search`, {
-            params: {
-              q: search,
-            },
-          })
-          .then((res) => setSearchRes(res.data))
-          .catch((err) => console.log(err))
-      : setSearchRes(null);
-  }, [search]);
-
+  // alert ( "• ASSALOMU ALEKUM SAYTIMIZGA XUSH KELIBSIZ •")
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const number = ["+ 375 736 463 64 72  /+ 375 736 463 64 72"];
   return (
-    <div className="header py-2 bg-gray-100 mb-32">
+    <div className="header  bg-gray-100 ">
       <div className="container mx-auto ">
-        <nav className="navbar py-5 flex items-center justify-between">
+        <nav className="navbar py-2 flex items-center justify-between">
           <div className="navbar__logo">
-         <Link to={"/"}  > <p className="text-3xl font-bold	 "> clickhose<hr className="hrr" /></p></Link>  
+         <Link to={"/"}  >    <img
+              className="w-[150px] h-[80px] object-contain "
+              src={logo}
+              alt="FOTO"
+            /></Link>  
 
           </div>
           <div className={`nav__collect ${isMenuOpen ? "show" : ""}`}>
             <ul className="navbar__collection flex text-xl gap-7">
-              <NavLink className={"text-[#000] "} to={"/"}>
-                Home
-              </NavLink>
-              <NavLink className={"text-[#000] "} to={"/Каталог"}>
-                Каталог
-              </NavLink>
-              <NavLink className={"text-[#000] "} to={"/Доставка"}>
-                Доставка
-              </NavLink>
-              <NavLink className={"text-[#000] "} to={"/Условия"}>
-                Условия
-              </NavLink>
-              <NavLink className={"text-[#000] "} to={"/Контакты"}>
-                Контакты
-              </NavLink>
-              <NavLink className={"text-[#000] "} to={"/login"}>
-                Login
-              </NavLink>
+<li>BIZ BILAN BOG'LANISH</li>
+
+<li>
+          <a target="_blank" class="nav-link" href="https://t.me/Islom_Zaripov11">TELEGRAM
+          PRO'FIL</a>
+              
+              </li>
+              
+              <li>
+          <a target="_blank" class="nav-link" href="https://t.me/zardesign11">TELEGRAM
+          KANALMIZ</a>
+              
+              </li>
+             
             </ul>
           </div>
           <div className="div">
@@ -73,17 +58,13 @@ const Header = () => {
             </div>
           </div>
           <div className="navbar__number  flex-col text-base font-medium ">
-            {number?.map((el, index) => (
-              <li key={index} className="navbar__item list-none">
-                <a href="#">
-                  <span>{el}</span>
-                </a>
-              </li>
-            ))}
+          <a class="nav-link" href="tel: 97 490 20 07">TEL : 97 490 20 07</a>
           </div>
-          <div onClick={toggleMenu} className="navbar__menu">
+          <di  
+          
+          v onClick={toggleMenu} className="navbar__menu">
             <RiMenu2Fill />
-          </div>
+          </di>
         </nav>
       </div>
     </div>
